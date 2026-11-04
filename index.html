@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alecia Jones | St. George Real Estate | Red Rock Real Estate</title>
+<meta name="description" content="10+ years helping buyers and sellers across St. George and Southern Utah. Buying, selling, new construction and relocation. Call or text 435-518-9384.">
+<link rel="canonical" href="https://www.imyourrealestategirl.com/">
+<meta property="og:title" content="Alecia Jones | I’m Your Real Estate Girl">
+<meta property="og:description" content="10+ years helping buyers and sellers across St. George and Southern Utah. Call or text 435-518-9384.">
+<meta property="og:url" content="https://www.imyourrealestategirl.com/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E8E6E2;
+  --surface:#F3F2EF;
+  --ink:#000000;
+  --ink-soft:#3A3936;
+  --grey:#7E7B76;
+  --line:#C9C5BE;
+  --tan:#B89F7E;
+  --tan-deep:#8C7458;
+  --ridge-far:#CFC6B8;
+  --ridge-mid:#A8957A;
+  --ridge-near:#000000;
+  --on-dark:#E8E6E2;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#000000;--surface:#161615;--ink:#EDEBE7;--ink-soft:#C4C0B9;--grey:#9A968F;
+    --line:#34322F;--tan:#C2AA88;--tan-deep:#C2AA88;--ridge-far:#2B2824;--ridge-mid:#5E5242;
+    --ridge-near:#161615;--on-dark:#EDEBE7;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#000000;--surface:#161615;--ink:#EDEBE7;--ink-soft:#C4C0B9;--grey:#9A968F;
+  --line:#34322F;--tan:#C2AA88;--tan-deep:#C2AA88;--ridge-far:#2B2824;--ridge-mid:#5E5242;
+  --ridge-near:#161615;--on-dark:#EDEBE7;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--tan-deep);outline-offset:3px}
+.wrap{width:min(1120px,100% - 3rem);margin-inline:auto}
+h1,h2,h3{font-family:"Marcellus",Georgia,"Times New Roman",serif;font-weight:400;line-height:1.1;margin:0}
+h2{font-size:clamp(2rem,4vw,2.75rem);margin-bottom:1.25rem}
+p{margin:0 0 1rem;max-width:62ch}
+
+/* Header */
+header.top{position:absolute;inset:0 0 auto;z-index:5}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+.brand{font-family:"Marcellus",Georgia,serif;font-size:1.25rem;text-decoration:none}
+.brand small{display:block;font-family:"Karla",sans-serif;font-size:.8rem;color:var(--grey);letter-spacing:.02em}
+nav.links{display:flex;gap:1.75rem;font-size:.95rem}
+nav.links a{text-decoration:none;color:var(--ink-soft)}
+nav.links a:hover{color:var(--ink)}
+@media (max-width:760px){nav.links{gap:1.1rem;flex-wrap:wrap;font-size:.95rem}header.top .wrap{flex-direction:column;align-items:flex-start;gap:.75rem}.hero .wrap.hero-copy{padding-top:12.5rem}}
+
+/* Hero */
+.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:center;overflow:hidden}
+.hero-copy{position:relative;z-index:2;padding:8rem 0 14rem}
+.hero h1{font-size:clamp(2.75rem,7.5vw,6rem);max-width:12ch;letter-spacing:-.01em}
+.hero .lede{font-size:clamp(1.1rem,1.6vw,1.3rem);color:var(--ink-soft);margin-top:1.5rem;max-width:44ch}
+.actions{display:flex;flex-wrap:wrap;gap:.875rem;margin-top:2.25rem}
+.btn{display:inline-block;padding:.95rem 1.6rem;font:600 1rem/1 "Karla",sans-serif;text-decoration:none;border:1px solid var(--ink);border-radius:2px;cursor:pointer;transition:background .2s,color .2s}
+.btn-solid{background:var(--ink);color:var(--bg)}
+.btn-solid:hover{background:var(--tan-deep);border-color:var(--tan-deep);color:#fff}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--bg)}
+.ridges{position:absolute;inset:auto 0 0 0;width:100%;height:auto;z-index:1;pointer-events:none}
+.ridges .far{fill:var(--ridge-far)}
+.ridges .mid{fill:var(--ridge-mid)}
+.ridges .near{fill:var(--ridge-near)}
+@media (prefers-reduced-motion:no-preference){
+  .ridges path{transform:translateY(40px);opacity:0;animation:rise 1.4s cubic-bezier(.2,.7,.2,1) forwards}
+  .ridges .mid{animation-delay:.15s}
+  .ridges .near{animation-delay:.3s}
+  @keyframes rise{to{transform:none;opacity:1}}
+}
+
+/* Dark band directly under the ridge */
+.band{background:var(--ridge-near);color:var(--on-dark)}
+.band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding:2.5rem 0 3.5rem}
+.band p{margin:0;color:var(--on-dark);opacity:.85;font-size:1rem}
+.band strong{display:block;font-family:"Marcellus",Georgia,serif;font-weight:400;font-size:1.5rem;color:var(--tan);opacity:1;margin-bottom:.25rem}
+@media (max-width:760px){.band .wrap{grid-template-columns:1fr;gap:1.5rem}}
+
+section{padding:6rem 0}
+
+/* About */
+.about .wrap{display:grid;grid-template-columns:5fr 7fr;gap:4rem;align-items:center}
+.portrait{aspect-ratio:4/5;background:var(--surface);border:1px solid var(--line);overflow:hidden}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.signoff{font-family:"Marcellus",Georgia,serif;font-size:1.35rem;color:var(--tan-deep);margin-top:1.5rem}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr;gap:2.5rem}.portrait{max-width:380px}}
+
+/* Services */
+.services{background:var(--surface);border-block:1px solid var(--line)}
+.svc-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin-top:2.5rem}
+.svc{padding:2rem 2rem 2rem 0;border-bottom:1px solid var(--line)}
+.svc:nth-child(even){padding-left:2rem;padding-right:0;border-left:1px solid var(--line)}
+.svc h3{font-size:1.6rem;margin-bottom:.6rem}
+.svc p{color:var(--ink-soft);margin:0}
+@media (max-width:760px){.svc-list{grid-template-columns:1fr}.svc,.svc:nth-child(even){padding:1.75rem 0;border-left:0}}
+
+.brand{font-size:1.5rem}
+.brand small{font-size:.85rem;margin-top:.15rem}
+.hero-name{font-family:"Marcellus",Georgia,serif;font-size:clamp(1.25rem,2.2vw,1.6rem);color:var(--tan-deep);margin:0 0 .75rem}
+
+/* Neighborhoods */
+.city{font-size:1.75rem;margin:3rem 0 1.25rem;padding-bottom:.75rem;border-bottom:1px solid var(--line)}
+.hood-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.hood{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:.35rem;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-left:3px solid var(--tan);border-radius:2px;padding:1.4rem 1.25rem;font:inherit;cursor:pointer;transition:border-color .2s,background .2s}
+.hood:hover{border-color:var(--tan-deep);border-left-color:var(--tan-deep)}
+.hood-name{font-family:"Marcellus",Georgia,serif;font-size:1.35rem;line-height:1.2}
+.hood-line{color:var(--grey);font-size:.95rem}
+.hood-more{margin-top:.5rem;font-weight:600;font-size:.9rem;text-decoration:underline;text-underline-offset:3px}
+dialog{width:min(560px,100% - 2rem);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-top:4px solid var(--tan);border-radius:2px;padding:2rem}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog h3{font-size:2rem;margin-bottom:1rem}
+dialog p{color:var(--ink-soft)}
+.dialog-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+
+/* Blog */
+.blog{background:var(--surface);border-block:1px solid var(--line)}
+.posts{margin-top:2rem;border-top:1px solid var(--line)}
+.post{border-bottom:1px solid var(--line)}
+.post summary{list-style:none;cursor:pointer;padding:1.5rem 0;display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline}
+.post summary::-webkit-details-marker{display:none}
+.post-title{font-family:"Marcellus",Georgia,serif;font-size:clamp(1.3rem,2.2vw,1.6rem);line-height:1.25}
+.post-title::after{content:" +";color:var(--tan-deep)}
+.post[open] .post-title::after{content:" −"}
+.post-date{color:var(--grey);font-size:.9rem;white-space:nowrap}
+.post-body{padding:0 0 2rem}
+.post-body p{color:var(--ink-soft)}
+.post-link{display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline;padding:1.5rem 0;text-decoration:none;color:inherit}
+.post-link .post-title::after{content:"  Read";font-family:"Karla",sans-serif;font-size:.85rem;font-weight:600;color:var(--tan-deep);text-decoration:underline;text-underline-offset:3px}
+.post-link:hover .post-title{color:var(--tan-deep)}
+.post-body h4{font-family:"Marcellus",Georgia,serif;font-weight:400;font-size:1.5rem;margin:2.25rem 0 .75rem}
+.post-body h5{font-family:"Karla",sans-serif;font-weight:600;font-size:1.1rem;margin:1.75rem 0 .5rem}
+.post-body ul{color:var(--ink-soft);padding-left:1.25rem;margin:0 0 1rem;max-width:62ch}
+.post-body li{margin-bottom:.4rem}
+.post-body a{color:var(--tan-deep);text-underline-offset:3px}
+.table-scroll{overflow-x:auto;margin:0 0 1.25rem;max-width:760px}
+.post-body table{border-collapse:collapse;width:100%;font-size:.98rem;color:var(--ink-soft)}
+.post-body th,.post-body td{text-align:left;vertical-align:top;padding:.7rem .9rem .7rem 0;border-bottom:1px solid var(--line)}
+.post-body th{color:var(--ink);font-weight:600}
+.post-body thead th{border-bottom:2px solid var(--tan)}
+.post-body .sources{font-size:.9rem}
+.post-photo{margin:1.5rem 0 1.75rem;max-width:520px}
+.post-photo img{width:100%;height:auto;border:1px solid var(--line);border-radius:2px}
+
+/* Review */
+.review{background:var(--ridge-near);color:var(--on-dark)}
+.review blockquote{margin:0;max-width:30ch;font-family:"Marcellus",Georgia,serif;font-size:clamp(1.75rem,3.6vw,2.6rem);line-height:1.25}
+.review .full-review{margin-top:1.75rem;max-width:62ch;color:var(--on-dark);opacity:.85;font-size:1.05rem;line-height:1.7}
+.review cite{display:block;margin-top:1.75rem;font-style:normal;color:var(--tan);font-size:1rem}
+.review .more{margin-top:2rem;display:inline-block;color:var(--on-dark);opacity:.8}
+
+/* Contact */
+.contact .wrap{display:grid;grid-template-columns:5fr 7fr;gap:4rem}
+.direct{font-size:1.1rem}
+.direct a{display:block;font-family:"Marcellus",Georgia,serif;font-size:clamp(1.75rem,3vw,2.25rem);text-decoration:none;margin:.5rem 0 1.5rem}
+.direct a:hover{color:var(--tan-deep)}
+form{display:grid;gap:1.1rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+label{display:block;font-size:.9rem;font-weight:600;color:var(--ink-soft);margin-bottom:.35rem}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:.8rem .9rem}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--tan-deep);outline-offset:0;border-color:transparent}
+textarea{min-height:130px;resize:vertical}
+.hidden{position:absolute;left:-9999px}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr;gap:2.5rem}.row{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding:2.5rem 0 3rem;font-size:.9rem;color:var(--grey)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer p{margin:0}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Alecia Jones<small>I’m Your Real Estate Girl | Red Rock Real Estate</small></a>
+    <nav class="links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#services">Buyers</a>
+      <a href="#areas">Neighborhoods</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title" style="padding:0">
+    <div class="wrap hero-copy">
+      <p class="hero-name">Alecia Jones</p>
+      <h1 id="hero-title">I’m Your Real Estate Girl.</h1>
+      <p class="lede">Over 10 years helping people buy and sell homes in St. George and across Southern Utah, with straight answers and someone in your corner from first showing to closing day.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="tel:4355189384">Call or text 435-518-9384</a>
+        <a class="btn btn-line" href="#contact">Send me a message</a>
+      </div>
+    </div>
+    <svg class="ridges" viewBox="0 0 1440 360" preserveAspectRatio="none" aria-hidden="true">
+      <path class="far" d="M0 210 L120 180 L210 196 L300 150 L380 150 L440 120 L560 120 L600 160 L720 168 L800 128 L940 128 L990 170 L1100 176 L1180 140 L1300 140 L1360 170 L1440 160 L1440 360 L0 360Z"/>
+      <path class="mid" d="M0 262 L90 246 L160 252 L230 214 L330 214 L370 240 L470 248 L560 222 L640 222 L700 196 L810 196 L850 232 L960 240 L1040 210 L1120 210 L1170 236 L1270 244 L1340 220 L1440 226 L1440 360 L0 360Z"/>
+      <path class="near" d="M0 310 L140 300 L250 290 L320 268 L420 268 L470 292 L620 300 L760 286 L840 262 L960 262 L1010 288 L1160 298 L1260 280 L1440 284 L1440 360 L0 360Z"/>
+    </svg>
+  </section>
+
+  <div class="band">
+    <div class="wrap">
+      <p><strong>10+ years</strong>in the Southern Utah market</p>
+      <p><strong>Millions</strong>in closed sales for my clients</p>
+      <p><strong>Off-MLS access</strong>to new construction from local builders</p>
+    </div>
+  </div>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="portrait">
+        <img src="images/alecia-jones-portrait.jpg" alt="Alecia Jones, St. George real estate agent" width="765" height="1100">
+      </div>
+      <div>
+        <h2 id="about-title">Local, honest, and on your side</h2>
+        <p>I’ve spent more than a decade helping first-time buyers, growing families, retirees, investors, and people relocating to Washington County find the right home and get the best deal.</p>
+        <p>I know these neighborhoods, the HOAs, the schools, and the local builders, including new construction you won’t find online. When you work with me, you get fast communication and a clear plan at every step.</p>
+        <p>I’ve lived in Southern Utah for over 20 years. It turned out to be the perfect place to raise my three kids, and it’s the place I plan to call home for the rest of my life.</p>
+        <p class="signoff">Alecia Jones</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <h2 id="services-title">How I can help</h2>
+      <div class="svc-list">
+        <div class="svc">
+          <h3>Buying a home</h3>
+          <p>I’ll help you find homes that fit your life and budget, then negotiate hard so you know exactly what you’re getting before you sign.</p>
+        </div>
+        <div class="svc">
+          <h3>Selling your home</h3>
+          <p>Accurate pricing, strong photos, and marketing that gets your home seen by the right buyers, so it sells for top dollar.</p>
+        </div>
+        <div class="svc">
+          <h3>New construction</h3>
+          <p>I work with local builders, including ones that don’t list on the MLS, and represent you through the build, not the builder.</p>
+        </div>
+        <div class="svc">
+          <h3>Relocating to Southern Utah</h3>
+          <p>Moving from out of state? I’ll walk you through neighborhoods, costs, and lifestyle so you can buy with confidence, even from a distance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="areas" id="areas" aria-labelledby="areas-title">
+    <div class="wrap">
+      <h2 id="areas-title">Neighborhoods people love</h2>
+      <p>Tap any neighborhood to learn what it’s like to live there.</p>
+
+      <h3 class="city">St. George area</h3>
+      <div class="hood-grid">
+        <button class="hood" data-hood="desert-color"><span class="hood-name">Desert Color</span><span class="hood-line">Newer master-planned community</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="little-valley"><span class="hood-name">Little Valley</span><span class="hood-line">Larger lots and newer builds</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="green-valley"><span class="hood-name">Green Valley</span><span class="hood-line">West side, near the trails</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="bloomington"><span class="hood-name">Bloomington</span><span class="hood-line">Established, golf and river</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="stone-cliff"><span class="hood-name">Stone Cliff</span><span class="hood-line">Hillside homes with views</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="entrada"><span class="hood-name">Entrada</span><span class="hood-line">Gated golf community</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="solente"><span class="hood-name">Solenté</span><span class="hood-line">Gated luxury, Washington City</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="sunriver"><span class="hood-name">SunRiver</span><span class="hood-line">55+ active adult community</span><span class="hood-more">Learn more</span></button>
+      </div>
+
+      <h3 class="city">Cedar City</h3>
+      <div class="hood-grid">
+        <button class="hood" data-hood="downtown-cedar"><span class="hood-name">Downtown and near SUU</span><span class="hood-line">Walkable, historic homes</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="fiddlers"><span class="hood-name">Fiddlers Canyon</span><span class="hood-line">East bench with views</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="west-cedar"><span class="hood-name">West Cedar</span><span class="hood-line">Space, acreage and open views</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="enoch"><span class="hood-name">Enoch</span><span class="hood-line">Just north of Cedar City</span><span class="hood-more">Learn more</span></button>
+        <button class="hood" data-hood="cedar-highlands"><span class="hood-name">Cedar Highlands</span><span class="hood-line">Mountain living up the canyon</span><span class="hood-more">Learn more</span></button>
+      </div>
+    </div>
+  </section>
+
+  <dialog id="hood-dialog" aria-labelledby="hood-title">
+    <h3 id="hood-title"></h3>
+    <div id="hood-body"></div>
+    <div class="dialog-actions">
+      <a class="btn btn-solid" href="#contact" id="hood-cta">Ask me about homes here</a>
+      <button class="btn btn-line" type="button" id="hood-close">Close</button>
+    </div>
+  </dialog>
+
+  <section class="blog" id="blog" aria-labelledby="blog-title">
+    <div class="wrap">
+      <h2 id="blog-title">Your questions, answered</h2>
+      <p>Straight answers to the questions buyers and sellers ask me most.</p>
+      <div class="posts">
+        <a class="post post-link" href="st-george-buy-now.html"><span class="post-title">Why now is a smart time to buy a home in St. George, Utah (even with 7% rates)</span><span class="post-date"><time datetime="2026-10-28">October 28, 2026</time></span></a>
+        <a class="post post-link" href="reasons-to-live-in-st-george-utah.html"><span class="post-title">10 Reasons to Live in St. George, Utah (From Someone Who’s Lived Here 20+ Years)</span><span class="post-date"><time datetime="2026-10-21">October 21, 2026</time></span></a>
+        <a class="post post-link" href="new-construction-vs-resale-st-george.html"><span class="post-title">New construction or resale: which is better in St. George?</span><span class="post-date"><time datetime="2026-10-21">October 21, 2026</time></span></a>
+        <a class="post post-link" href="what-to-do-before-listing-your-home.html"><span class="post-title">What should I do before listing my home for sale?</span><span class="post-date"><time datetime="2026-10-21">October 21, 2026</time></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="review" aria-label="Client review">
+    <div class="wrap">
+      <blockquote>“She made the selling and buying process simple and easy.”</blockquote>
+      <p class="full-review">“This is our second time having Alecia help us with our real estate needs. She has been a tremendous asset in our buying and selling process. She made it clear and concise each time she needed anything from us and was always updating us on any changes. She made the selling and buying process simple and easy. Alecia did her research on every piece of property we were interested in which helped us a lot when it came to comparing different areas and homes. 10 out of 10 would recommend Alecia to anyone.”</p>
+      <cite>Michael Berrett, repeat client, bought and sold with Alecia</cite>
+      <a class="more" href="https://www.zillow.com/profile/AleciaJonesRealtor" target="_blank" rel="noopener">Read more reviews on Zillow</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="direct">
+        <h2 id="contact-title">Let’s talk</h2>
+        <p>Call or text me anytime.</p>
+        <a href="tel:4355189384">435-518-9384</a>
+        <p>Or email <a href="mailto:ImYourRealEstateGirl@gmail.com" style="display:inline;font:inherit;margin:0;text-decoration:underline">ImYourRealEstateGirl@gmail.com</a></p>
+      </div>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="company">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden"><label>Leave this empty <input name="company"></label></p>
+        <div class="row">
+          <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+          <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div>
+          <label for="interest">I’m interested in</label>
+          <select id="interest" name="interest">
+            <option>Buying a home</option>
+            <option>Selling my home</option>
+            <option>New construction</option>
+            <option>Relocating to Southern Utah</option>
+            <option>Just have a question</option>
+          </select>
+        </div>
+        <div><label for="msg">Message</label><textarea id="msg" name="message"></textarea></div>
+        <div><button class="btn btn-solid" type="submit">Send message</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Alecia Jones, REALTOR® | Red Rock Real Estate | 435-518-9384</p>
+    <p>Equal Housing Opportunity</p>
+  </div>
+</footer>
+
+<script>
+const hoods = {
+  "desert-color": ["Desert Color", "A newer master-planned community on the south end of St. George. Expect modern homes, community amenities, and a resort-style feel, with quick access to the Southern Parkway and the airport.", "A good fit if you want something new and low-maintenance, or you’re looking at second-home and investment options."],
+  "little-valley": ["Little Valley", "On the southeast side of St. George, Little Valley is known for newer subdivisions and some of the larger lots in town. Many homes have RV parking or big garages, and some areas allow animals.", "A good fit if you want room for toys, a shop, or a bigger yard without leaving the city."],
+  "green-valley": ["Green Valley", "On the west side of St. George, close to Snow Canyon State Park, hiking and biking trails, and golf. You’ll find a mix of single-family homes, townhomes, and condos.", "A good fit if you love the outdoors and want red rock views close to home."],
+  "bloomington": ["Bloomington", "One of St. George’s established neighborhoods, built around a golf course and the Virgin River. Mature trees, larger lots, and a quiet, settled feel.", "A good fit if you want a classic neighborhood with character rather than brand-new construction."],
+  "stone-cliff": ["Stone Cliff", "Hillside homes with big views over St. George and the surrounding red rock. Many homes are custom or semi-custom and higher-end.", "A good fit if views and privacy are at the top of your list."],
+  "entrada": ["Entrada", "A gated golf community near Snow Canyon, with luxury homes set against lava rock and red cliffs, plus a private club with golf and amenities.", "A good fit if you want a resort lifestyle with a private, gated setting."],
+  "solente": ["Solenté", "A gated, master-planned luxury community in Washington City, set against the red cliffs and near the Green Springs area. It sits close to popular hiking, biking, and equestrian trails, and the architecture is designed to blend into the desert landscape. It comes from the same developers behind Desert Color.", "A good fit if you want a private, gated setting with luxury homes and trails right outside your door."],
+  "sunriver": ["SunRiver", "A 55+ active adult community in St. George with golf, a large clubhouse, pools, and a full calendar of clubs and events.", "A good fit if you’re 55 or older and want an active, amenity-rich community."],
+  "downtown-cedar": ["Downtown and near SUU", "The heart of Cedar City, close to Southern Utah University, the Utah Shakespeare Festival, restaurants, and Main Street. Many homes are older, with character and mature trees.", "A good fit if you want to walk to campus, events, and dining."],
+  "fiddlers": ["Fiddlers Canyon", "On Cedar City’s east bench, with newer homes, nearby trails, and wide views of the valley.", "A good fit if you want newer construction with easy access to the outdoors."],
+  "west-cedar": ["West Cedar", "On the west side of Cedar City, with larger lots, open views, and more room to spread out. Some properties are zoned for animals.", "A good fit if you want space, a big shop, or horse property."],
+  "enoch": ["Enoch", "A separate small city just north of Cedar City. Newer subdivisions, larger lots, and often more home for your money, with a short drive into Cedar.", "A good fit if you want more space and value while staying close to town."],
+  "cedar-highlands": ["Cedar Highlands", "A mountain community up Cedar Canyon at higher elevation, with cabins and homes among the pines, cooler summers, and real winters.", "A good fit if you want a mountain retreat or a full-time home with four seasons."]
+};
+const dlg = document.getElementById("hood-dialog");
+document.querySelectorAll(".hood").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const [name, about, fit] = hoods[btn.dataset.hood];
+    document.getElementById("hood-title").textContent = name;
+    const body = document.getElementById("hood-body");
+    body.innerHTML = "";
+    [about, fit].forEach(t => { const p = document.createElement("p"); p.textContent = t; body.appendChild(p); });
+    dlg.showModal();
+  });
+});
+document.getElementById("hood-close").addEventListener("click", () => dlg.close());
+document.getElementById("hood-cta").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+</script>
+
+</body>
+</html>
