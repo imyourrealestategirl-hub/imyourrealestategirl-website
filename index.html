@@ -77,6 +77,9 @@ nav.links a:hover{color:var(--ink)}
 .btn-solid:hover{background:var(--tan-deep);border-color:var(--tan-deep);color:#fff}
 .btn-line{background:transparent;color:var(--ink)}
 .btn-search{background:var(--tan-deep);border-color:var(--tan-deep);color:#fff}
+.search-btns{flex-basis:100%;display:grid;grid-template-columns:max-content;gap:.875rem}
+.search-btns .btn{text-align:center;line-height:1.25}
+@media (max-width:480px){.search-btns{grid-template-columns:1fr}}
 .btn-search:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .btn-line:hover{background:var(--ink);color:var(--bg)}
 .ridges{position:absolute;inset:auto 0 0 0;width:100%;height:auto;z-index:1;pointer-events:none}
@@ -221,7 +224,10 @@ footer p{margin:0}
       </div>
       <div class="hero-photo"><img src="images/alecia-jones-portrait.jpg" alt="Alecia Jones, St. George real estate agent" width="765" height="1100" fetchpriority="high"></div>
       <div class="actions">
-        <a class="btn btn-search" href="https://my.flexmls.com/AleciaJone" target="_blank" rel="noopener">Search properties in the St. George area</a>
+        <div class="search-btns">
+          <a class="btn btn-search" href="https://my.flexmls.com/AleciaJone" target="_blank" rel="noopener">Search properties in the St. George area</a>
+          <a class="btn btn-search" href="https://my.flexmls.com/aleciajones" target="_blank" rel="noopener">Search properties in the Cedar City area</a>
+        </div>
         <a class="btn btn-solid" href="tel:4355189384">Call or text 435-518-9384</a>
         <a class="btn btn-line" href="#contact">Send me a message</a>
       </div>
