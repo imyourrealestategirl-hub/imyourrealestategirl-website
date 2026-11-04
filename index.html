@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;600&family=Libre+Baskerville:wght@700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#E8E6E2;
@@ -207,6 +207,39 @@ header.top{background:var(--cream);border-bottom:2px solid var(--tan)}
 header.top .wrap{padding:1.25rem 0}
 .hero .wrap.hero-copy{padding-top:10rem}
 @media (max-width:760px){.hero .wrap.hero-copy{padding-top:14rem}}
+
+/* Desert turquoise accent */
+:root{--pop:#2F7F8A;--pop-deep:#24636B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--pop:#5FB3BE;--pop-deep:#7FC6CF}}
+:root[data-theme="dark"]{--pop:#5FB3BE;--pop-deep:#7FC6CF}
+header.top{border-bottom-color:var(--pop)}
+.hero h1{color:var(--pop)}
+.hero-name{color:var(--pop)}
+.btn-search{background:var(--pop);border-color:var(--pop);color:#fff}
+.btn-search:hover{background:var(--pop-deep);border-color:var(--pop-deep);color:#fff}
+.post-body a,.post-page .crumb a,.more-posts a{color:var(--pop)}
+.post-link .post-title::after{color:var(--pop)}
+.post-link:hover .post-title{color:var(--pop)}
+.hood-more{color:var(--pop)}
+.hood{border-color:var(--pop);border-left-color:var(--pop)}
+.hood:hover{border-color:var(--pop-deep);border-left-color:var(--pop-deep)}
+.hero h1{font-family:"DM Serif Display",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.005em}
+
+/* Header type */
+.brand{font-family:"Libre Baskerville",Georgia,"Times New Roman",serif;font-weight:700;font-size:1.35rem}
+nav.links a{text-transform:uppercase;font-weight:700;letter-spacing:.07em;font-size:.85rem;color:var(--ink)}
+nav.links a:hover{color:var(--pop,var(--tan-deep))}
+.brand small{font-weight:400}
+
+/* Cleaner hero actions */
+.hero .actions{display:grid;gap:1.5rem;justify-items:start}
+.search-label{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 .6rem}
+.search-btns{display:flex;flex-wrap:wrap;gap:.75rem;grid-template-columns:none}
+.secondary-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem}
+.call-link{color:var(--ink-soft);text-decoration:none;font-size:1rem}
+.call-link strong{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.call-link:hover strong{color:var(--pop)}
+@media (max-width:480px){.search-btns{display:grid;grid-template-columns:1fr 1fr;width:100%}.search-btns .btn{padding-inline:.5rem}}
 </style>
 </head>
 <body>
@@ -233,12 +266,17 @@ header.top .wrap{padding:1.25rem 0}
       </div>
       <div class="hero-photo"><img src="images/alecia-jones-portrait.jpg" alt="Alecia Jones, St. George real estate agent" width="765" height="1100" fetchpriority="high"></div>
       <div class="actions">
-        <div class="search-btns">
-          <a class="btn btn-search" href="https://my.flexmls.com/AleciaJone" target="_blank" rel="noopener">Search properties in the St. George area</a>
-          <a class="btn btn-search" href="https://my.flexmls.com/aleciajones" target="_blank" rel="noopener">Search properties in the Cedar City area</a>
+        <div class="search-group">
+          <p class="search-label">Search homes for sale</p>
+          <div class="search-btns">
+            <a class="btn btn-search" href="https://my.flexmls.com/AleciaJone" target="_blank" rel="noopener" aria-label="Search properties in the St. George area">St. George area</a>
+            <a class="btn btn-search" href="https://my.flexmls.com/aleciajones" target="_blank" rel="noopener" aria-label="Search properties in the Cedar City area">Cedar City area</a>
+          </div>
         </div>
-        <a class="btn btn-solid" href="tel:4355189384">Call or text 435-518-9384</a>
-        <a class="btn btn-line" href="#contact">Send me a message</a>
+        <div class="secondary-actions">
+          <a class="btn btn-line" href="#contact" id="home-value-btn">What is my house worth?</a>
+          <a class="call-link" href="tel:4355189384">or call/text <strong>435-518-9384</strong></a>
+        </div>
       </div>
     </div>
     <svg class="ridges" viewBox="0 0 1440 360" preserveAspectRatio="none" aria-hidden="true">
@@ -375,6 +413,7 @@ header.top .wrap{padding:1.25rem 0}
           <select id="interest" name="interest">
             <option>Buying a home</option>
             <option>Selling my home</option>
+            <option>What is my house worth?</option>
             <option>New construction</option>
             <option>Relocating to Southern Utah</option>
             <option>Just have a question</option>
@@ -424,6 +463,12 @@ document.querySelectorAll(".hood").forEach(btn => {
 document.getElementById("hood-close").addEventListener("click", () => dlg.close());
 document.getElementById("hood-cta").addEventListener("click", () => dlg.close());
 dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+document.getElementById("home-value-btn").addEventListener("click", () => {
+  const sel = document.getElementById("interest");
+  sel.value = "What is my house worth?";
+  const msg = document.getElementById("msg");
+  if (!msg.value) msg.placeholder = "Your home's address, plus anything I should know (updates, pool, RV parking...)";
+});
 </script>
 
 </body>
