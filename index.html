@@ -184,6 +184,15 @@ textarea{min-height:130px;resize:vertical}
 footer{border-top:1px solid var(--line);padding:2.5rem 0 3rem;font-size:.9rem;color:var(--grey)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
 footer p{margin:0}
+
+/* Hero photo beside intro */
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);grid-template-areas:"name name" "text photo" "actions photo";column-gap:3.5rem;align-items:center}
+.hero-grid .hero-name{grid-area:name}
+.hero-grid .hero-text{grid-area:text}
+.hero-grid .actions{grid-area:actions;align-self:start}
+.hero-photo{grid-area:photo;justify-self:center;width:min(100%,340px);aspect-ratio:4/5;border:1px solid var(--line);outline:6px solid var(--surface);box-shadow:12px 12px 0 var(--tan);overflow:hidden;background:var(--surface)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;grid-template-areas:"name" "text" "photo" "actions"}.hero-photo{justify-self:start;width:220px;margin-top:1.75rem;box-shadow:8px 8px 0 var(--tan)}}
 </style>
 </head>
 <body>
@@ -203,10 +212,12 @@ footer p{margin:0}
 
 <main>
   <section class="hero" aria-labelledby="hero-title" style="padding:0">
-    <div class="wrap hero-copy">
-      <p class="hero-name">Alecia Jones</p>
+    <div class="wrap hero-copy hero-grid">      <p class="hero-name">Alecia Jones</p>
+      <div class="hero-text">
       <h1 id="hero-title">I’m Your Real Estate Girl.</h1>
       <p class="lede">Over 10 years helping people buy and sell homes in St. George and across Southern Utah, with straight answers and someone in your corner from first showing to closing day.</p>
+      </div>
+      <div class="hero-photo"><img src="images/alecia-jones-portrait.jpg" alt="Alecia Jones, St. George real estate agent" width="765" height="1100" fetchpriority="high"></div>
       <div class="actions">
         <a class="btn btn-solid" href="tel:4355189384">Call or text 435-518-9384</a>
         <a class="btn btn-line" href="#contact">Send me a message</a>
