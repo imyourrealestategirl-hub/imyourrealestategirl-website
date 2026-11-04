@@ -198,6 +198,15 @@ footer p{margin:0}
 .hero-photo{grid-area:photo;justify-self:center;width:min(100%,340px);aspect-ratio:4/5;border:1px solid var(--line);outline:6px solid var(--surface);box-shadow:12px 12px 0 var(--tan);overflow:hidden;background:var(--surface)}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
 @media (max-width:860px){.hero-grid{grid-template-columns:1fr;grid-template-areas:"name" "text" "photo" "actions"}.hero-photo{justify-self:start;width:220px;margin-top:1.75rem;box-shadow:8px 8px 0 var(--tan)}}
+
+/* Cream header band */
+:root{--cream:#F7F1E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--cream:#1D1B18}}
+:root[data-theme="dark"]{--cream:#1D1B18}
+header.top{background:var(--cream);border-bottom:2px solid var(--tan)}
+header.top .wrap{padding:1.25rem 0}
+.hero .wrap.hero-copy{padding-top:10rem}
+@media (max-width:760px){.hero .wrap.hero-copy{padding-top:14rem}}
 </style>
 </head>
 <body>
@@ -217,7 +226,7 @@ footer p{margin:0}
 
 <main>
   <section class="hero" aria-labelledby="hero-title" style="padding:0">
-    <div class="wrap hero-copy hero-grid">      <p class="hero-name">Alecia Jones</p>
+    <div class="wrap hero-copy hero-grid">      <p class="hero-name">Serving Southern Utah</p>
       <div class="hero-text">
       <h1 id="hero-title">I’m Your Real Estate Girl.</h1>
       <p class="lede">Over 10 years helping people buy and sell homes in St. George and across Southern Utah, with straight answers and someone in your corner from first showing to closing day.</p>
